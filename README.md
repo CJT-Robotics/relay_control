@@ -1,4 +1,3 @@
-# relay_control
 # Relay Control Node
 
 ## Overview
