@@ -1,4 +1,3 @@
-# relay_control
 # Relay Control Node
 
 ## Overview
@@ -122,4 +121,8 @@ When the ROS node is terminated or shut down gracefully, the internal `shutdown_
 b'\xA0\x01\x00\xA1'
 ```
 
+<<<<<<< HEAD
 This forces the relay into the **OFF** state before releasing the serial port interface, helping prevent unintended hardware activation after node shutdown.
+=======
+This forces the relay into the **OFF** state before releasing the serial port interface, helping prevent unintended hardware activation after node shutdown.
+>>>>>>> 624ce5204d01fa7fd5abe3bd6704595b84efa5d2
