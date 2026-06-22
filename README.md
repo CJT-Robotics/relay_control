@@ -119,5 +119,4 @@ When the ROS node is terminated or shut down gracefully, the internal `shutdown_
 ```python
 b'\xA0\x01\x00\xA1'
 ```
-
 This forces the relay into the **OFF** state before releasing the serial port interface, helping prevent unintended hardware activation after node shutdown.
