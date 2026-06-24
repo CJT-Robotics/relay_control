@@ -4,6 +4,7 @@ from std_msgs.msg import String
 import serial
 import serial.tools.list_ports
 import sys
+import os  # Neu importiert für die Pfadprüfung
 
 class RelayControlNode:
     def __init__(self):
@@ -39,6 +40,11 @@ class RelayControlNode:
         rospy.on_shutdown(self.shutdown_hook)
 
     def find_relay_port(self):
+        special_path = "/dev/relais"
+        if os.path.exists(special_path):
+            return special_path
+            
+        rospy.loginfo("/dev/relais not found. CH340 USB-Device")
         ports = serial.tools.list_ports.comports()
         for port in ports:
             if port.vid == self.ch340_vid and port.pid == self.ch340_pid:
